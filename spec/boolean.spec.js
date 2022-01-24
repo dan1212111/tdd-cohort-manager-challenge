@@ -64,4 +64,17 @@ describe("Boolean", () => {
     //verify
     expect(expected).toEqual(result);
   });
+
+  it("can't add cohort with same name", () => {
+    //set up
+    const expected = "Name Already Taken"
+
+    //execute
+    boolean.addCohort("green")
+    boolean.addCohort("blue")
+    const result = boolean.addCohort("blue");
+
+    //verify
+    expect(result).toEqual(expected);
+  });
 });

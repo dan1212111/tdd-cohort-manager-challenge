@@ -7,6 +7,11 @@ class Boolean {
 
   addCohort(name) {
     const cohort = new Cohort(name);
+    for (let i = 0; i < this.listOfCohorts.length; i++) {
+      if (this.listOfCohorts[i].name === name) {
+        return "Name Already Taken";
+      }
+    }
     this.listOfCohorts.push(cohort);
     return cohort;
   }

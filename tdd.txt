@@ -24,3 +24,20 @@ A cohort should have a list of students. Each student should have a studentID, f
 -find student by cohort
 -add student 
 -remove student 
+
+
+// Extended
+- Search for student by student ID
+- Cohorts have fixed capacity at 24 students. Adding students is not possible beyond the 24 limit.
+- Cohorts can't have the same name, and can't exist without a name
+- The same student can't exist in multiple cohorts.
+- A student can't be removed from a cohort if it wasn't present in the first place.
+- Search for students by name (first and last) and return all matching results
+
+Your program should be composed of at least two classes
+
+/ In cohorts.js add findStudentBy (id) function - DONE
+/ add a max capacity 24 - cohorts add student  - DONE 
+/ Add if statement add cohorts (Boolean.js), no same name - DONE
+/ Add if statment add student (cohorts.js), no same student - DONE
+/ Add a can't remove student if name !== exist 0- DONE 
