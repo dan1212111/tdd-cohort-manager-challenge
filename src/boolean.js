@@ -1,33 +1,35 @@
-const Cohort = require("./cohorts");
+const Cohort = require('./cohorts')
+const NAME_TAKEN = 'Name Already Taken'
+const COHORT_FOUND = 'Cohort Not Found'
 
 class Boolean {
-  constructor() {
-    this.listOfCohorts = [];
+  constructor () {
+    this.listOfCohorts = []
   }
 
-  addCohort(name) {
-    const cohort = new Cohort(name);
+  addCohort (name) {
+    const cohort = new Cohort(name)
     for (let i = 0; i < this.listOfCohorts.length; i++) {
       if (this.listOfCohorts[i].name === name) {
-        return "Name Already Taken";
+        return NAME_TAKEN
       }
     }
-    this.listOfCohorts.push(cohort);
-    return cohort;
+    this.listOfCohorts.push(cohort)
+    return cohort
   }
 
-  listOfCohort() {
-    return this.listOfCohorts;
+  listOfCohort () {
+    return this.listOfCohorts
   }
 
-  findCohortBy(name) {
+  findCohortBy (name) {
     for (let i = 0; i < this.listOfCohorts.length; i++) {
       if (this.listOfCohorts[i].name === name) {
-        return this.listOfCohorts[i];
+        return this.listOfCohorts[i]
       }
     }
-    return "Cohort Not Found";
+    return COHORT_FOUND
   }
 }
 
-module.exports = Boolean;
+module.exports = Boolean
